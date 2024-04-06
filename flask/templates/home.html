@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Page</title>
+    <style>
+        /* Add CSS for positioning buttons */
+        .button-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+        }
+        
+        .button-container form {
+            margin-right: 10px;
+        }
+
+        /* Add CSS for background image */
+        body {
+            background-image: url('/static/images/background.jpg'); /* Replace with your image file path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif; /* Set a font for better readability */
+        }
+       
+
+        .prediction-text {
+            text-align: center;
+            position: absolute;
+            top: 30%; /* Slightly adjusted the top value */
+            width: 100%;
+            transform: translateY(-50%);
+            margin-top: 20px; /* Increased margin */
+            color: black; /* Set text color to white for better contrast */
+        }
+
+        h1 {
+            font-size: 36px; /* Increase the font size for a prominent heading */
+            margin-bottom: 10px; /* Added some space below the heading */
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.6; /* Increased line height for better readability */
+            margin-bottom: 15px; /* Added some space below the paragraphs */
+        }
+
+        input[type="submit"] {
+            font-size: 18px; /* Increase button font size */
+            padding: 10px 20px; /* Increase button padding */
+            cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+            border: none; /* Remove default border */
+            background-color: #007bff; /* Set button background color */
+            color: #fff; /* Set button text color */
+            border-radius: 5px; /* Rounded button corners for a polished look */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3; /* Darker shade on hover for visual feedback */
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="button-container">
+        <form action="/home">
+            <input type="submit" value="Home">
+        </form>
+
+        <form action="/predict">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+
+    <div class="prediction-text">
+        <h1>Hello There!!</h1>
+        <p>Welcome to our Fraud Prediction Page!</p>
+
+        <p>The objective of this article is to predict online payment fraud with the help of given parameters. This is basically a classification problem as the target column has two objects namely 'isfraud' and 'is not a fraud'. <br>We will be using classification algorithms such as random forest, decision tree, SVM, extra tree classifier, XGBoost. We will predict the result with the model which gives the best accuracy.</p>
+    </div>
+
+</body>
+
+</html>
